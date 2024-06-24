@@ -72,7 +72,7 @@ def read_citifile(filename):
 
     while lines:
         line = lines.pop(0)
-        if line.startswith("CITIFILE A.01.00"):
+        if line.startswith("CITIFILE A.01.00") or line.startswith("CITIFILE A.01.01"):
             packages.append(parse_package(lines))
 
     ds = {}
