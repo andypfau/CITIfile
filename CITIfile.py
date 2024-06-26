@@ -74,6 +74,9 @@ def read_citifile(filename):
         line = lines.pop(0)
         if line.startswith("CITIFILE A.01.00") or line.startswith("CITIFILE A.01.01"):
             packages.append(parse_package(lines))
+    
+    if len(packages) < 1:
+        raise RuntimeError('No CITI file headers found')
 
     ds = {}
     for package in packages:
