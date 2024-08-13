@@ -48,6 +48,16 @@ and `xarray` are designed to handle this kind of data.
 See [xarray documents](http://xarray.pydata.org/en/stable/) to
 learn that how to manipulate `xarray.Dataset` object.
 
+### Comments
+
+If any comments were found in the CITI file, they will be stored in `attrs`:
+
+```
+if 'comments' in citi.attrs:
+    print('File comments:')
+    print(citi.attrs['comments'])
+```
+
 ## Websites
 
 Main website:
