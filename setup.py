@@ -12,9 +12,7 @@ setup(
     description='To parse CITI format file to xarray.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    install_requires=[
-        "xarray>=0.14.1"
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3"
