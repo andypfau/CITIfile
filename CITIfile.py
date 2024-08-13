@@ -70,10 +70,16 @@ def read_citifile(filename):
     lines = f.readlines()
     f.close()
 
+    comments = []
     while lines:
         line = lines.pop(0)
         if line.startswith("CITIFILE A.01.00") or line.startswith("CITIFILE A.01.01"):
             packages.append(parse_package(lines))
+        elif line.startswith("#"):
+            comments.append(line[1:].strip())
+    
+    if len(packages) < 1:
+        raise RuntimeError('No CITI file headers found')
 
     ds = {}
     for package in packages:
@@ -81,5 +87,9 @@ def read_citifile(filename):
         dataset = {d[0]: xr.DataArray(d[1], coords=variables) for d in data}
         ds.update(dataset)
 
-    ds = xr.Dataset(ds)
+    attrs = dict()
+    if len(comments) > 0:
+        attrs['comments'] = '\n'.join(comments)
+
+    ds = xr.Dataset(ds, attrs=attrs)
     return ds
