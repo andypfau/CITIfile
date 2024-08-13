@@ -8,12 +8,12 @@ __email__ = "titor.sun@gmail.com"
 
 
 def parse_variable(lines, array):
-    if array.dtype == np.float:
+    if array.dtype == float:
         def _convert(x):
-            return np.float(x)
+            return float(x)
     else:
         def _convert(r, i):
-            return np.complex(np.float(r), np.float(i))
+            return complex(float(r), float(i))
 
     data = map(lambda line: _convert(*line.split(",")), lines[:array.size])
     array[:] = np.array(list(data)).reshape(*array.shape)[:]
@@ -36,14 +36,14 @@ def parse_package(lines):
 
         if line[0] == "VAR":
             length = int(line[-1])  # amount of data points
-            dtype = np.float if line[-2] == "MAG" else np.complex  # data type
+            dtype = float if line[-2] == "MAG" else complex  # data type
 
             shape.append(length)
             array = np.zeros(length, dtype)
             var_list.append((line[1], array))
 
         elif line[0] == "DATA":
-            dtype = np.float if line[-1] == "MAG" else np.complex  # data type
+            dtype = float if line[-1] == "MAG" else complex  # data type
             array = np.zeros(shape, dtype=dtype)
             data_list.append((line[1], array))
 
