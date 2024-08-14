@@ -91,7 +91,7 @@ Main website:
 https://github.com/TitorX/CITIfile
 
 CITIfile Definitions:
-http://literature.cdn.keysight.com/litweb/pdf/ads15/cktsim/ck2016.html
+https://helpfiles.keysight.com/csg/N1930xB/FilePrint/CITIfile_Format.htm
 
 xarray document:
 http://xarray.pydata.org/en/stable/
