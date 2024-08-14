@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "CITIfile"
+dynamic = ["version"]
+description = "To parse CITI format file to xarray."
+maintainers = [
+  {name = "Titor", email = "titor.sun@gmail.com"},
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3"
+]
+requires-python = ">= 3.8"
+dependencies = [
+  "numpy>=1.26.0",
+  "xarray>=0.14.1",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/TitorX/CITIfile"
+Repository = "https://github.com/TitorX/CITIfile"
+Issues = "https://github.com/TitorX/CITIfile/issues"
