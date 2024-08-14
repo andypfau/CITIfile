@@ -20,7 +20,6 @@ pip install -U CITIfile
 ```python
 from CITIfile import read_citifile
 
-
 data = read_citifile("data.citi")
 ```
 
