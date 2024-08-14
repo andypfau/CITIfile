@@ -85,6 +85,16 @@ for px, py in zip(x, y):
 
 Both `x` and `y` are `numpy.ndarray`.
 
+### File Comments
+
+If any comments are found in the file, they are stored in the `comments` attribute:
+
+```
+if 'comments' in citi.attrs:
+    print(citi.attrs['comments'])
+```
+
+
 ## Websites
 
 Main website:
