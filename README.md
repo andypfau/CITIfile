@@ -88,8 +88,8 @@ Both `x` and `y` are `numpy.ndarray`.
 If any comments are found in the file, they are stored in the `comments` attribute:
 
 ```python
-if 'comments' in citi.attrs:
-    print(citi.attrs['comments'])
+if 'comments' in data.attrs:
+    print(data.attrs['comments'])
 ```
 
 
