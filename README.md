@@ -47,7 +47,7 @@ and `xarray` are designed to handle this kind of data.
 See [xarray documents](http://xarray.pydata.org/en/stable/) to
 learn that how to manipulate `xarray.Dataset` object.
 
-### Displaying Coordinates and Data Vairables
+### Displaying Coordinates and Data Variables
 
 ```python
 print('Coordinates:')
