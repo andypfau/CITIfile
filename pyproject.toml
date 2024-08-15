@@ -27,3 +27,7 @@ dependencies = [
 Homepage = "https://github.com/TitorX/CITIfile"
 Repository = "https://github.com/TitorX/CITIfile"
 Issues = "https://github.com/TitorX/CITIfile/issues"
+
+
+[tool.setuptools-git-versioning]
+enabled = true
